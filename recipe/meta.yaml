@@ -1,19 +1,19 @@
 {% set name = "telegram-send" %}
-{% set version = "0.25" %}
+{% set version = "0.26" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: e6cda001a89e1cd02317fcd0456288a0cdd5aa56970dec6fbd83ad9af1db05ac
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f70216c0bb14434ea7d225504f2af3e1353e1e5868e5bdd1f4f460c64eb02628
 
 build:
   number: 0
   entry_points:
     - telegram-send=telegram_send:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -31,11 +31,11 @@ test:
     - telegram-send --help
 
 about:
-  home: "https://github.com/rahiel/telegram-send"
+  home: https://github.com/rahiel/telegram-send
   license: GPL-3.0
   license_family: GPL3
   license_file: LICENSE.txt
-  summary: "Send messages and files over Telegram from the command-line."
+  summary: Send messages and files over Telegram from the command-line.
   dev_url: https://github.com/rahiel/telegram-send
 
 extra:
