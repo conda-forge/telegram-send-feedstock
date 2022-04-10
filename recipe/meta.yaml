@@ -1,5 +1,5 @@
 {% set name = "telegram-send" %}
-{% set version = "0.32" %}
+% set version = "0.32" %}
 
 package:
   name: {{ name|lower }}
