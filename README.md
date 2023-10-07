@@ -1,11 +1,11 @@
-About telegram-send
-===================
+About telegram-send-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/telegram-send-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rahiel/telegram-send
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/telegram-send-feedstock/blob/main/LICENSE.txt)
 
 Summary: Send messages and files over Telegram from the command-line.
 
