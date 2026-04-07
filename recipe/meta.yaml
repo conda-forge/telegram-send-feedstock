@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9f69abb331598e4b6ba8a173b15df7dfdec4eec17e3600a43d554c53b0150695
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - telegram-send=telegram_send:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -19,14 +19,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - appdirs
     - colorama
-    - python >=3.6
+    - python >={{ python_min }}
     - python-telegram-bot >=12.1.1
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - telegram-send --help
 
