@@ -1,16 +1,16 @@
 {% set name = "telegram-send" %}
-{% set version = "0.37" %}
+{% set version = "0.39.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9f69abb331598e4b6ba8a173b15df7dfdec4eec17e3600a43d554c53b0150695
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: bb1570fda809a030dfa188ffb30fd92b97de6cde9f1268d57fed6b28c2f4aff5
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - telegram-send=telegram_send:main
   script: {{ PYTHON }} -m pip install . -vv
