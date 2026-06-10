@@ -11,20 +11,19 @@ source:
 
 build:
   number: 0
-  entry_points:
-    - telegram-send=telegram_send:main
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
+    - hatchling
     - python {{ python_min }}
   run:
-    - appdirs
-    - colorama
+    - platformdirs >=4.5.1
+    - colorama  # [win]
     - python >={{ python_min }}
-    - python-telegram-bot >=12.1.1
+    - python-telegram-bot ==22.5
 
 test:
   requires:
