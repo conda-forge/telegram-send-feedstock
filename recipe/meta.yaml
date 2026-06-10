@@ -17,11 +17,11 @@ requirements:
   host:
     - pip
     - hatchling
-    - python {{ python_min }}
+    - python
   run:
     - platformdirs >=4.5.1
     - colorama  # [win]
-    - python >={{ python_min }}
+    - python
     - python-telegram-bot ==22.5
 
 test:
