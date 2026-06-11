@@ -10,7 +10,7 @@ source:
   sha256: bb1570fda809a030dfa188ffb30fd92b97de6cde9f1268d57fed6b28c2f4aff5
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - telegram-send = telegram_send.telegram_send:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
