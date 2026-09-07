@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: bb1570fda809a030dfa188ffb30fd92b97de6cde9f1268d57fed6b28c2f4aff5
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - telegram-send = telegram_send.telegram_send:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
